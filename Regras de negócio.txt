@@ -1,0 +1,4 @@
+﻿* GERAR RELATÓRIO DE VARIAÇÕES
+	* INTERVALO
+		* Quando receber intervalo do usuário, contar mais um para salvar. Tal fato deve-se pelo daley entre coleta e inserção do dado no gráfico
+		* Não pode ser menos que 1

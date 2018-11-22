@@ -1,0 +1,86 @@
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe.config
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.pdb
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csprojResolveAssemblyReference.cache
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Form1.resources
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Properties.Resources.resources
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.SplashScreen.resources
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.GenerateResource.Cache
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.exe
+C:\Users\Guilherme Ferreira\source\repos\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.pdb
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe.config
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.pdb
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.dll
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.xml
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Form1.resources
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Properties.Resources.resources
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.SplashScreen.resources
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.GenerateResource.cache
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.CoreCompileInputs.cache
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.CopyComplete
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.exe
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.pdb
+C:\Users\guilherme.ferreira\Desktop\Versão (com Async Await)\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csprojAssemblyReference.cache
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe.config
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.pdb
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csprojResolveAssemblyReference.cache
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Form1.resources
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Properties.Resources.resources
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.SplashScreen.resources
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.GenerateResource.Cache
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.exe
+C:\Users\Lab01\Desktop\Bitcoin Hoje\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.pdb
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe.config
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.pdb
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Form1.resources
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Preferencias.resources
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Properties.Resources.resources
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Sobre.resources
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.SplashScreen.resources
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.GenerateResource.Cache
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.exe
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.pdb
+C:\Users\Guilherme Ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csprojResolveAssemblyReference.cache
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe.config
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.pdb
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.dll
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.xml
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csprojAssemblyReference.cache
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Form1.resources
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Preferencias.resources
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Properties.Resources.resources
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Sobre.resources
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.SplashScreen.resources
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.GenerateResource.cache
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.CoreCompileInputs.cache
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.CopyComplete
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.exe
+C:\Users\guilherme.ferreira\Downloads\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.pdb
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe.config
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.exe
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\bin\Debug\Bitcoin Hoje.pdb
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.dll
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\bin\Debug\Newtonsoft.Json.xml
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csprojAssemblyReference.cache
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Form1.resources
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Preferencias.resources
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Properties.Resources.resources
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.Sobre.resources
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin_Hoje.SplashScreen.resources
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.GenerateResource.cache
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.CoreCompileInputs.cache
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.CopyComplete
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.exe
+C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.pdb

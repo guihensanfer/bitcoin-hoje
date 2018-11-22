@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Bitcoin_Hoje.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="moeda" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BRL</Value>
+    </Setting>
+    <Setting Name="x" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1.0001</Value>
+    </Setting>
+    <Setting Name="y" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1.0004</Value>
+    </Setting>
+    <Setting Name="time" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="analisar" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="intervalo_timer_relatorio" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">21</Value>
+    </Setting>
+    <Setting Name="agregar_valores" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
