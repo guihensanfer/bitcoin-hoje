@@ -5,4 +5,4 @@ Desenvolvido como parte do projeto integrador do curso de Engenharia da Computa√
 
 Esta vers√£o foi desenvolvida em C#
 
-![alt text](https://github.com/guihensanfer/bitcoin-hoje-c-sharp/btcHjPrint.png)
+![alt text](https://github.com/guihensanfer/bitcoin-hoje-c-sharp/blob/master/btcHojePrint.png)
