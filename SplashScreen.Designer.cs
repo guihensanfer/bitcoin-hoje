@@ -141,7 +141,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 16);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Versão 1.0.0.0";
+            this.label3.Text = "Versão 2.0.0.0";
             // 
             // label4
             // 
@@ -151,7 +151,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(414, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(271, 144);
+            this.label4.Size = new System.Drawing.Size(271, 108);
             this.label4.TabIndex = 9;
             this.label4.Text = resources.GetString("label4.Text");
             // 

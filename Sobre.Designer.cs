@@ -47,7 +47,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(404, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(277, 221);
+            this.label4.Size = new System.Drawing.Size(277, 182);
             this.label4.TabIndex = 17;
             this.label4.Text = resources.GetString("label4.Text");
             // 
@@ -60,7 +60,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 16);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Versão 1.0.0.0";
+            this.label3.Text = "Versão 2.0.0.0";
             // 
             // panel5
             // 

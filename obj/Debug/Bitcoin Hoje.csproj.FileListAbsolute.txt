@@ -84,3 +84,18 @@ C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.C
 C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.csproj.CopyComplete
 C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.exe
 C:\Users\guilherme.ferreira\Desktop\Bitcoin Hoje\obj\Debug\Bitcoin Hoje.pdb
+C:\Users\guihe\Source\Repos\bitcoin-hoje\obj\Debug\Bitcoin_Hoje.Form1.resources
+C:\Users\guihe\Source\Repos\bitcoin-hoje\obj\Debug\Bitcoin_Hoje.Preferencias.resources
+C:\Users\guihe\Source\Repos\bitcoin-hoje\obj\Debug\Bitcoin_Hoje.Properties.Resources.resources
+C:\Users\guihe\Source\Repos\bitcoin-hoje\obj\Debug\Bitcoin_Hoje.Sobre.resources
+C:\Users\guihe\Source\Repos\bitcoin-hoje\obj\Debug\Bitcoin_Hoje.SplashScreen.resources
+C:\Users\guihe\Source\Repos\bitcoin-hoje\obj\Debug\Bitcoin Hoje.csproj.GenerateResource.cache
+C:\Users\guihe\Source\Repos\bitcoin-hoje\obj\Debug\Bitcoin Hoje.csproj.CoreCompileInputs.cache
+C:\Users\guihe\Source\Repos\bitcoin-hoje\bin\Debug\Bitcoin Hoje.exe.config
+C:\Users\guihe\Source\Repos\bitcoin-hoje\bin\Debug\Bitcoin Hoje.exe
+C:\Users\guihe\Source\Repos\bitcoin-hoje\bin\Debug\Bitcoin Hoje.pdb
+C:\Users\guihe\Source\Repos\bitcoin-hoje\bin\Debug\Newtonsoft.Json.dll
+C:\Users\guihe\Source\Repos\bitcoin-hoje\bin\Debug\Newtonsoft.Json.xml
+C:\Users\guihe\Source\Repos\bitcoin-hoje\obj\Debug\Bitcoin Hoje.csproj.CopyComplete
+C:\Users\guihe\Source\Repos\bitcoin-hoje\obj\Debug\Bitcoin Hoje.exe
+C:\Users\guihe\Source\Repos\bitcoin-hoje\obj\Debug\Bitcoin Hoje.pdb

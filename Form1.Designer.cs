@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timerColetarECalcularValor = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
@@ -53,6 +53,7 @@
             this.aJUDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreOBitcoinHojeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataEHoraInicioAnaliseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tempoDeInstabilidadeDeRedeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusCONEXAO = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelVALOR_ATUAL = new System.Windows.Forms.ToolStripStatusLabel();
@@ -66,6 +67,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -76,7 +78,6 @@
             this.labelCresceu = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.timerInstabilidadeRede = new System.Windows.Forms.Timer(this.components);
-            this.tempoDeInstabilidadeDeRedeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -236,6 +237,16 @@
             this.dataEHoraInicioAnaliseToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
             this.dataEHoraInicioAnaliseToolStripMenuItem.Visible = false;
             // 
+            // tempoDeInstabilidadeDeRedeToolStripMenuItem
+            // 
+            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray;
+            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Name = "tempoDeInstabilidadeDeRedeToolStripMenuItem";
+            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Size = new System.Drawing.Size(251, 20);
+            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Text = "Tempo de instabilidade de rede: 0 segundos";
+            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Visible = false;
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -284,6 +295,7 @@
             this.listView1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.ForeColor = System.Drawing.Color.Gainsboro;
             this.listView1.FullRowSelect = true;
+            this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 443);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
@@ -329,6 +341,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
@@ -338,6 +351,20 @@
             this.panel1.Size = new System.Drawing.Size(1065, 40);
             this.panel1.TabIndex = 6;
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.DimGray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(629, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(138, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "FIBONACCI";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // linkLabel1
             // 
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -346,7 +373,7 @@
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel1.Location = new System.Drawing.Point(917, 19);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(137, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(138, 13);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "ALTERAR PREFERÊNCIAS...";
@@ -365,55 +392,56 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Gainsboro;
-            chartArea3.AxisY.IsStartedFromZero = false;
-            chartArea3.AxisY2.IsStartedFromZero = false;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea1.AxisY.IsStartedFromZero = false;
+            chartArea1.AxisY2.IsStartedFromZero = false;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 64);
             this.chart1.Name = "chart1";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series9.Legend = "Legend1";
-            series9.Name = "Valor Bitcoin";
-            series9.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series9.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series10.BorderColor = System.Drawing.Color.Red;
-            series10.BorderWidth = 2;
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series10.Color = System.Drawing.Color.Green;
-            series10.Legend = "Legend1";
-            series10.Name = "Limite crescente";
-            series10.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            series11.BorderWidth = 2;
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series11.Color = System.Drawing.Color.Red;
-            series11.Legend = "Legend1";
-            series11.Name = "Limite decrescente";
-            series11.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            series12.BorderWidth = 2;
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series12.Color = System.Drawing.Color.Black;
-            series12.Legend = "Legend1";
-            series12.LegendText = "Média dos valores coletados";
-            series12.Name = "Media";
-            series12.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            this.chart1.Series.Add(series9);
-            this.chart1.Series.Add(series10);
-            this.chart1.Series.Add(series11);
-            this.chart1.Series.Add(series12);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.Legend = "Legend1";
+            series1.Name = "Valor Bitcoin";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series2.BorderColor = System.Drawing.Color.Red;
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Green;
+            series2.Legend = "Legend1";
+            series2.Name = "Limite crescente";
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.Red;
+            series3.Legend = "Legend1";
+            series3.Name = "Limite decrescente";
+            series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            series4.BorderWidth = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Black;
+            series4.Legend = "Legend1";
+            series4.LegendText = "Média dos valores coletados";
+            series4.Name = "Media";
+            series4.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(1065, 379);
             this.chart1.TabIndex = 8;
             this.chart1.Text = "Gráfico Bitcoin, valor em relação ao tempo";
             this.chart1.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
-            title3.Name = "Title1";
-            title3.Text = "Bitcoin: Valor x Tempo";
-            this.chart1.Titles.Add(title3);
+            title1.Name = "Title1";
+            title1.Text = "Bitcoin: Valor x Tempo";
+            this.chart1.Titles.Add(title1);
+            this.chart1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chart1_MouseDown);
             // 
             // label2
             // 
@@ -483,16 +511,6 @@
             // 
             this.timerInstabilidadeRede.Interval = 1000;
             this.timerInstabilidadeRede.Tick += new System.EventHandler(this.timerInstabilidadeRede_Tick);
-            // 
-            // tempoDeInstabilidadeDeRedeToolStripMenuItem
-            // 
-            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray;
-            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Name = "tempoDeInstabilidadeDeRedeToolStripMenuItem";
-            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Size = new System.Drawing.Size(251, 20);
-            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Text = "Tempo de instabilidade de rede: 0 segundos";
-            this.tempoDeInstabilidadeDeRedeToolStripMenuItem.Visible = false;
             // 
             // Form1
             // 
@@ -569,6 +587,7 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Timer timerInstabilidadeRede;
         private System.Windows.Forms.ToolStripMenuItem tempoDeInstabilidadeDeRedeToolStripMenuItem;
+        private System.Windows.Forms.Button button2;
     }
 }
 

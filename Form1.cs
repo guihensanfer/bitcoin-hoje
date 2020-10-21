@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Windows.Forms;
 using Bitcoin_Hoje.Properties;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Bitcoin_Hoje
 {
@@ -199,7 +200,7 @@ namespace Bitcoin_Hoje
 
             cresceu = 0;
             caiu = 0;
-            manteve = 0;
+            manteve = 0;            
 
             // COLETA OS DADOS
 
@@ -269,7 +270,7 @@ namespace Bitcoin_Hoje
                         label2.Visible = false;
 
                         // Oportunidade de investimento, Bitcoin crescendo
-                        chart1.Series[0].Points[t - 1].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+                        chart1.Series[0].Points[t - 1].MarkerStyle = MarkerStyle.Circle;
                         chart1.Series[0].Points[t - 1].MarkerColor = Color.YellowGreen;
 
                         // Notifica
@@ -504,6 +505,58 @@ namespace Bitcoin_Hoje
                 tempoDeInstabilidadeDeRedeToolStripMenuItem.Text = "Tempo de instabilidade de rede: 1 segundo";
             }
             tempoDeInstabilidadeDeRedeToolStripMenuItem.Visible = true;
+        }               
+
+        private void chart1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (!ModoFibonacci)
+                // Modo Fibo desativado
+                return;
+            if (fiboP1 != 0 && fiboP2 != 0)
+                // Valores já definidos
+                return;
+            
+            HitTestResult result = chart1.HitTest(e.X, e.Y);
+
+            if (result != null && result.ChartElementType == ChartElementType.DataPoint && 
+                result.Series.Name.Equals(chart1.Series[0].Name))
+            {
+                var prop = result.Object as DataPoint;
+
+                prop.MarkerStyle = MarkerStyle.Star4;
+                prop.MarkerSize = 15;
+                prop.MarkerColor = Color.Black;
+                prop.MarkerBorderColor = Color.Black;
+
+                if (fiboP1.Equals(0))
+                    fiboP1 = prop.YValues[0];
+                else if(!fiboP1.Equals(prop.YValues[0]))
+                    fiboP2 = prop.YValues[0];
+            }
+        }
+
+        private bool ModoFibonacci = false;
+        private double fiboP1 = 0;
+        private double fiboP2 = 0;
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(ModoFibonacci)
+            {
+                chart1.Cursor = Cursors.Arrow;
+
+                fiboP1 = 0;
+                fiboP2 = 0;                
+            }                
+            else
+            {
+                chart1.Cursor = Cursors.Cross;                
+            }                
+
+            ModoFibonacci = !ModoFibonacci;
+
+            foreach (var p in chart1.Series[0].Points)
+                p.MarkerStyle = MarkerStyle.None;
         }
     }
 }
