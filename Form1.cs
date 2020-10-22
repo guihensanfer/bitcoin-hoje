@@ -567,8 +567,7 @@ namespace Bitcoin_Hoje
             Color stripColor = Color.LightCoral;
             const short stripWidth = 4;
                      
-            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine() { 
-                Interval = 5,
+            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine() {                 
                 IntervalOffset = fiboP1,                
                 StripWidth = stripWidth,
                 BackColor = stripColor,
