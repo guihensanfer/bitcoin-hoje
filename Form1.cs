@@ -559,15 +559,16 @@ namespace Bitcoin_Hoje
         {
             // Resolver o calculo para listar estes itens
             double p100 = fiboP1 - fiboP2; // 100%
-            double p618 = p100 - (p100 * 0.618);
-            double p50 = p100 - (p100 * 0.5F);
-            double p382 = p100 - (p100 * 0.382F);
-            double p236 = p100 - (p100 * 0.236F);
+            double p618 = fiboP2 + (p100 * 0.618);
+            double p50 = fiboP2 + (p100 * 0.5F);
+            double p382 = fiboP2 + (p100 * 0.382F);
+            double p236 = fiboP2 + (p100 * 0.236F);
             double p0 = fiboP2;            
             Color stripColor = Color.LightCoral;
             const short stripWidth = 4;
                      
-            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine() {                 
+            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine() { 
+                Interval = 5,
                 IntervalOffset = fiboP1,                
                 StripWidth = stripWidth,
                 BackColor = stripColor,
@@ -576,6 +577,7 @@ namespace Bitcoin_Hoje
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
             {
+                Interval = 9.5,
                 IntervalOffset = p618,
                 StripWidth = stripWidth,
                 BackColor = stripColor,
@@ -622,7 +624,9 @@ namespace Bitcoin_Hoje
                 chart1.Cursor = Cursors.Arrow;
 
                 fiboP1 = 0;
-                fiboP2 = 0;                
+                fiboP2 = 0;
+
+                chart1.ChartAreas[0].AxisY.StripLines.Clear();
             }                
             else
             {
@@ -633,6 +637,6 @@ namespace Bitcoin_Hoje
 
             foreach (var p in chart1.Series[0].Points)
                 p.MarkerStyle = MarkerStyle.None;
-        }
+        }       
     }
 }

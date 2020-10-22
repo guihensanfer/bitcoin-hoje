@@ -394,6 +394,7 @@
             this.chart1.BackColor = System.Drawing.Color.Gainsboro;
             chartArea1.AxisY.IsStartedFromZero = false;
             chartArea1.AxisY2.IsStartedFromZero = false;
+            chartArea1.BorderWidth = 10;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -441,7 +442,7 @@
             this.chart1.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
             title1.Name = "Title1";
             title1.Text = "Bitcoin: Valor x Tempo";
-            this.chart1.Titles.Add(title1);
+            this.chart1.Titles.Add(title1);            
             this.chart1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chart1_MouseDown);
             // 
             // label2
