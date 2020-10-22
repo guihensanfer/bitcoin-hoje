@@ -13,7 +13,7 @@ namespace Bitcoin_Hoje
         Form1 f = new Form1();              
 
         private void timer1_Tick(object sender, EventArgs e)
-        {           
+        {   
             // Deixa o splash screen invisivel
             this.Opacity = 0;
             this.TopMost = false;            
@@ -34,7 +34,11 @@ namespace Bitcoin_Hoje
             // Aciona a interface principal deixando-a "segundo plano" temporariamente
             f.Opacity = 0;
             f.ShowInTaskbar = false;
-            f.Show();                        
-        }      
+            f.Show();
+
+#if DEBUG
+            timer1.Interval = 100;
+#endif         
+        }
     }
 }

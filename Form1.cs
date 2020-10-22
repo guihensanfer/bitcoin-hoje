@@ -41,6 +41,12 @@ namespace Bitcoin_Hoje
             // Variável criada para receber o valor do Bitcoin conforme preferências do usuário que seram tratadas em seguida
             double bitconValor = -1;
 
+#if DEBUG
+
+            return new Random().NextDouble() * (100000 - 1) + 100000;
+
+#endif
+
             try
             {
                 // Tenta baixar o JSON
@@ -521,23 +527,93 @@ namespace Bitcoin_Hoje
             if (result != null && result.ChartElementType == ChartElementType.DataPoint && 
                 result.Series.Name.Equals(chart1.Series[0].Name))
             {
-                var prop = result.Object as DataPoint;
+                var prop = result.Object as DataPoint;                
+
+                if (fiboP1.Equals(0))
+                {
+                    fiboP1 = prop.YValues[0];
+                }                    
+                else if(!fiboP1.Equals(prop.YValues[0]))
+                {
+                    fiboP2 = prop.YValues[0];
+
+                    GerarPercentuaisFibonacci();
+                }     
+                else
+                {
+                    return;
+                }
 
                 prop.MarkerStyle = MarkerStyle.Star4;
                 prop.MarkerSize = 15;
                 prop.MarkerColor = Color.Black;
                 prop.MarkerBorderColor = Color.Black;
-
-                if (fiboP1.Equals(0))
-                    fiboP1 = prop.YValues[0];
-                else if(!fiboP1.Equals(prop.YValues[0]))
-                    fiboP2 = prop.YValues[0];
             }
         }
 
         private bool ModoFibonacci = false;
         private double fiboP1 = 0;
         private double fiboP2 = 0;
+
+        private void GerarPercentuaisFibonacci()
+        {
+            // Resolver o calculo para listar estes itens
+            double p100 = fiboP1 - fiboP2; // 100%
+            double p618 = p100 - (p100 * 0.618);
+            double p50 = p100 - (p100 * 0.5F);
+            double p382 = p100 - (p100 * 0.382F);
+            double p236 = p100 - (p100 * 0.236F);
+            double p0 = fiboP2;            
+            Color stripColor = Color.LightCoral;
+            const short stripWidth = 4;
+                     
+            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine() {                 
+                IntervalOffset = fiboP1,                
+                StripWidth = stripWidth,
+                BackColor = stripColor,
+                Text = "100%"
+            });
+
+            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
+            {
+                IntervalOffset = p618,
+                StripWidth = stripWidth,
+                BackColor = stripColor,
+                Text = "61,8%"
+            });
+
+            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
+            {
+                IntervalOffset = p50,
+                StripWidth = stripWidth,
+                BackColor = stripColor,
+                Text = "50%"
+            });
+
+            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
+            {
+                IntervalOffset = p382,
+                StripWidth = stripWidth,
+                BackColor = stripColor,
+                Text = "38,2%"
+            });
+
+            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
+            {
+                IntervalOffset = p236,
+                StripWidth = stripWidth,
+                BackColor = stripColor,
+                Text = "23,6%"
+            });
+
+            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
+            {                                
+                IntervalOffset = p0,                
+                StripWidth = stripWidth,
+                BackColor = stripColor,
+                Text = "0%"                
+            });
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {

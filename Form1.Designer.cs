@@ -401,8 +401,9 @@
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 64);
             this.chart1.Name = "chart1";
+            series1.BorderWidth = 4;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Valor Bitcoin";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
