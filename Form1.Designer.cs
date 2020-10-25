@@ -392,10 +392,17 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Gainsboro;
+            this.chart1.BorderlineColor = System.Drawing.Color.Black;
+            chartArea1.AxisX.LineWidth = 2;
             chartArea1.AxisY.IsStartedFromZero = false;
+            chartArea1.AxisY.LineWidth = 2;
             chartArea1.AxisY2.IsStartedFromZero = false;
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
+            chartArea1.CursorX.IsUserSelectionEnabled = true;
+            chartArea1.CursorX.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             chartArea1.Name = "ChartArea1";
-            chartArea1.ShadowOffset = 2;
+            chartArea1.ShadowOffset = 1;
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
@@ -408,7 +415,6 @@
             series1.Legend = "Legend1";
             series1.Name = "Valor Bitcoin";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series1.YValuesPerPoint = 5;
             series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             series2.BorderColor = System.Drawing.Color.Red;
             series2.BorderWidth = 2;
@@ -417,7 +423,6 @@
             series2.Color = System.Drawing.Color.Green;
             series2.Legend = "Legend1";
             series2.Name = "Limite crescente";
-            series2.YValuesPerPoint = 5;
             series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
@@ -425,7 +430,6 @@
             series3.Color = System.Drawing.Color.Red;
             series3.Legend = "Legend1";
             series3.Name = "Limite decrescente";
-            series3.YValuesPerPoint = 5;
             series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             series4.BorderWidth = 2;
             series4.ChartArea = "ChartArea1";
@@ -434,7 +438,6 @@
             series4.Legend = "Legend1";
             series4.LegendText = "Média dos valores coletados";
             series4.Name = "Media";
-            series4.YValuesPerPoint = 5;
             series4.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);

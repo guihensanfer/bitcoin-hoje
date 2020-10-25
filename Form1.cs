@@ -386,7 +386,7 @@ namespace Bitcoin_Hoje
             
 
 #if DEBUG
-            if (chart1.Series[0].Points.Count < 50)
+            if (chart1.Series[0].Points.Count < 500)
             {
                 new System.Threading.Thread(() => {
                     timerColetarECalcularValor_Tick(null, EventArgs.Empty);
@@ -579,17 +579,21 @@ namespace Bitcoin_Hoje
             double p382 = fiboP2 + (delta * 0.382F);
             double p236 = fiboP2 + (delta * 0.236F);                   
             Color stripColor = Color.LightCoral;
-            const short stripBorderWidth = 2;
-            const short stripBorderWidthExtremos = 3;
-                     
-            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine() {                 
-                IntervalOffset = fiboP1,                
+            const short stripBorderWidth = 1;
+            const short stripBorderWidthExtremos = 2;
+            Font fonte = new Font("Segoe UI Semibold", 5F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+
+            chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
+            {
+                IntervalOffset = fiboP1,
                 BackColor = stripColor,
                 BorderColor = stripColor,
-                Text = $"1 ({fiboP1.ToString("0.00")})",
+                Text = "100%",
                 BorderWidth = stripBorderWidthExtremos,
                 BorderDashStyle = ChartDashStyle.DashDot,
-                ToolTip = fiboP1.ToString()
+                ToolTip = fiboP1.ToString("0.00"),
+                Font = fonte,
+                ForeColor = stripColor
             });
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
@@ -599,8 +603,10 @@ namespace Bitcoin_Hoje
                 BorderDashStyle = ChartDashStyle.DashDot,
                 BackColor = stripColor,
                 BorderColor = stripColor,
-                Text = $"0,618 ({p618.ToString("0.00")})",
-                ToolTip = p618.ToString()
+                Text = "61,8",
+                ToolTip = p618.ToString("0.00"),
+                Font = fonte,
+                ForeColor = stripColor
             });
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
@@ -610,8 +616,10 @@ namespace Bitcoin_Hoje
                 BorderDashStyle = ChartDashStyle.DashDot,
                 BackColor = stripColor,
                 BorderColor = stripColor,
-                Text = $"0,5 ({p50.ToString("0.00")})",
-                ToolTip = p50.ToString()
+                Text = "50%",
+                ToolTip = p50.ToString("0.00"),
+                Font = fonte,
+                ForeColor = stripColor
             });
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
@@ -621,8 +629,10 @@ namespace Bitcoin_Hoje
                 BorderDashStyle = ChartDashStyle.DashDot,
                 BackColor = stripColor,
                 BorderColor = stripColor,
-                Text = $"0.382 ({p382.ToString("0.00")})",                
-                ToolTip = p382.ToString()
+                Text = "38,2%",                
+                ToolTip = p382.ToString("0.00"),
+                Font = fonte,
+                ForeColor = stripColor
             });
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
@@ -632,8 +642,10 @@ namespace Bitcoin_Hoje
                 BorderDashStyle = ChartDashStyle.DashDot,
                 BackColor = stripColor,
                 BorderColor = stripColor,
-                Text = $"0.236 ({p236.ToString("0.00")})",
-                ToolTip = p236.ToString()
+                Text = "23,6%",
+                ToolTip = p236.ToString("0.00"),
+                Font = fonte,
+                ForeColor = stripColor
             });
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
@@ -643,8 +655,10 @@ namespace Bitcoin_Hoje
                 BorderDashStyle = ChartDashStyle.DashDot,
                 BackColor = stripColor,
                 BorderColor = stripColor,
-                Text = $"0 ({fiboP2.ToString("0.00")})",
-                ToolTip = fiboP2.ToString()
+                Text = "0%",
+                ToolTip = fiboP2.ToString("0.00"),
+                Font = fonte,
+                ForeColor = stripColor
             });
         }
         
