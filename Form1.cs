@@ -594,7 +594,7 @@ namespace Bitcoin_Hoje
                 ToolTip = fiboP1.ToString("0.00"),
                 Font = fonte,
                 ForeColor = stripColor
-            });
+            });           
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
             {                
@@ -659,7 +659,7 @@ namespace Bitcoin_Hoje
                 ToolTip = fiboP2.ToString("0.00"),
                 Font = fonte,
                 ForeColor = stripColor
-            });
+            });            
         }
         
 
