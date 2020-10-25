@@ -386,7 +386,7 @@ namespace Bitcoin_Hoje
             
 
 #if DEBUG
-            if (chart1.Series[0].Points.Count < 500)
+            if (chart1.Series[0].Points.Count < 30)
             {
                 new System.Threading.Thread(() => {
                     timerColetarECalcularValor_Tick(null, EventArgs.Empty);
