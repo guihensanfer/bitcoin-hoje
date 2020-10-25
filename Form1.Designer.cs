@@ -394,8 +394,8 @@
             this.chart1.BackColor = System.Drawing.Color.Gainsboro;
             chartArea1.AxisY.IsStartedFromZero = false;
             chartArea1.AxisY2.IsStartedFromZero = false;
-            chartArea1.BorderWidth = 10;
             chartArea1.Name = "ChartArea1";
+            chartArea1.ShadowOffset = 2;
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
@@ -408,7 +408,8 @@
             series1.Legend = "Legend1";
             series1.Name = "Valor Bitcoin";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series1.YValuesPerPoint = 5;
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             series2.BorderColor = System.Drawing.Color.Red;
             series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
@@ -416,6 +417,7 @@
             series2.Color = System.Drawing.Color.Green;
             series2.Legend = "Legend1";
             series2.Name = "Limite crescente";
+            series2.YValuesPerPoint = 5;
             series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
@@ -423,6 +425,7 @@
             series3.Color = System.Drawing.Color.Red;
             series3.Legend = "Legend1";
             series3.Name = "Limite decrescente";
+            series3.YValuesPerPoint = 5;
             series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             series4.BorderWidth = 2;
             series4.ChartArea = "ChartArea1";
@@ -431,6 +434,7 @@
             series4.Legend = "Legend1";
             series4.LegendText = "Média dos valores coletados";
             series4.Name = "Media";
+            series4.YValuesPerPoint = 5;
             series4.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
@@ -442,7 +446,7 @@
             this.chart1.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
             title1.Name = "Title1";
             title1.Text = "Bitcoin: Valor x Tempo";
-            this.chart1.Titles.Add(title1);            
+            this.chart1.Titles.Add(title1);
             this.chart1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chart1_MouseDown);
             // 
             // label2

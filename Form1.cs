@@ -236,151 +236,166 @@ namespace Bitcoin_Hoje
             toolStripStatusLabelVALOR_ATUAL.Text = Settings.Default.moeda + " " + v_atual.ToString();
 
             // CHART
-            chart1.Series[0].Points.AddXY(t, v_atual);
+            BeginInvoke((Action)(() => {
+                chart1.Series[0].Points.AddXY(t, v_atual);
 
-            // Acrescenta mais um ao x, que por sua vez representa o eixo x do gráfico
-            t++;
+                // Acrescenta mais um ao x, que por sua vez representa o eixo x do gráfico
+                t++;
 
 
-            // CALCULA E MOSTRA NA TELA OS DADOS COLETADOS, SE, O USUÁRIO DESEJAR
-            if (Settings.Default.analisar)
-            {
-                // Se o gráfico estiver vazio não existe cálculo para fazer
-                if (chart1.Series[0].Points.Count > 0)
+                // CALCULA E MOSTRA NA TELA OS DADOS COLETADOS, SE, O USUÁRIO DESEJAR
+                if (Settings.Default.analisar)
                 {
-                    // Soma dos elementos no eixo Y (valor do Bitcoin)
-                    somaElementosEixoY = CalcularSomaValoresEixoY();
-
-                    // Cálcula a média: Soma dos elementos no eixo y pelo tempo decorrido (variável global x)
-                    media = (somaElementosEixoY / t);
-                    // Cálcula o valor que representará o limite entre o produto da média tendendo a crescente do Bitcoin
-                    mediaVezesX = (Settings.Default.x * media);
-                    // Cálcula o valor que representará o limite entre o produto da média tendendo a queda do Bitcoin
-                    mediaVezesY = media - ((Settings.Default.y * media) - media);
-
-                    // Verifica oportunidade de notificação
-                    if (v_atual >= mediaVezesX)
+                    // Se o gráfico estiver vazio não existe cálculo para fazer
+                    if (chart1.Series[0].Points.Count > 0)
                     {
-                        ListViewItem item = new ListViewItem();
-                        item.UseItemStyleForSubItems = false;
-                        item.Text = v_atual.ToString();
-                        item.SubItems.Add(media.ToString());
-                        item.SubItems.Add(DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year);
-                        item.SubItems.Add(DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second);
-                        item.SubItems.Add((v_atual - media).ToString());
-                        item.SubItems.Add((((v_atual - media)/media)*100).ToString() + "%");
-                        item.SubItems.Add("Crescimento").BackColor = Color.YellowGreen;
-                        item.SubItems[6].ForeColor = Color.White;
-                        listView1.Items.Add(item);
+                        // Soma dos elementos no eixo Y (valor do Bitcoin)
+                        somaElementosEixoY = CalcularSomaValoresEixoY();
 
-                        label2.Visible = false;
+                        // Cálcula a média: Soma dos elementos no eixo y pelo tempo decorrido (variável global x)
+                        media = (somaElementosEixoY / t);
+                        // Cálcula o valor que representará o limite entre o produto da média tendendo a crescente do Bitcoin
+                        mediaVezesX = (Settings.Default.x * media);
+                        // Cálcula o valor que representará o limite entre o produto da média tendendo a queda do Bitcoin
+                        mediaVezesY = media - ((Settings.Default.y * media) - media);
 
-                        // Oportunidade de investimento, Bitcoin crescendo
-                        chart1.Series[0].Points[t - 1].MarkerStyle = MarkerStyle.Circle;
-                        chart1.Series[0].Points[t - 1].MarkerColor = Color.YellowGreen;
-
-                        // Notifica
-                        NotificarCrescimento(Settings.Default.x);
-                        // Verifica se o usuário optou por incrementar valores em caso de notificação
-                        if (Settings.Default.agregar_valores)
+                        // Verifica oportunidade de notificação
+                        if (v_atual >= mediaVezesX)
                         {
-                            if(Settings.Default.x.Equals(1))
-                            {
-                                Settings.Default.x = 1.0001;
-                            }
-                            else
-                            {
-                                Settings.Default.x = Settings.Default.x * Settings.Default.x;
-                            }                            
+                            ListViewItem item = new ListViewItem();
+                            item.UseItemStyleForSubItems = false;
+                            item.Text = v_atual.ToString();
+                            item.SubItems.Add(media.ToString());
+                            item.SubItems.Add(DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year);
+                            item.SubItems.Add(DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second);
+                            item.SubItems.Add((v_atual - media).ToString());
+                            item.SubItems.Add((((v_atual - media) / media) * 100).ToString() + "%");
+                            item.SubItems.Add("Crescimento").BackColor = Color.YellowGreen;
+                            item.SubItems[6].ForeColor = Color.White;
+                            listView1.Items.Add(item);
 
-                            Settings.Default.Save();
+                            label2.Visible = false;
+
+                            // Oportunidade de investimento, Bitcoin crescendo
+                            chart1.Series[0].Points[t - 1].MarkerStyle = MarkerStyle.Circle;
+                            chart1.Series[0].Points[t - 1].MarkerColor = Color.YellowGreen;
+
+                            // Notifica
+                            NotificarCrescimento(Settings.Default.x);
+                            // Verifica se o usuário optou por incrementar valores em caso de notificação
+                            if (Settings.Default.agregar_valores)
+                            {
+                                if (Settings.Default.x.Equals(1))
+                                {
+                                    Settings.Default.x = 1.0001;
+                                }
+                                else
+                                {
+                                    Settings.Default.x = Settings.Default.x * Settings.Default.x;
+                                }
+
+                                Settings.Default.Save();
+                            }
+                        }
+                        else if (Settings.Default.y <= (media / v_atual))
+                        {
+                            ListViewItem item = new ListViewItem();
+                            item.UseItemStyleForSubItems = false;
+                            item.Text = v_atual.ToString();
+                            item.SubItems.Add(media.ToString());
+                            item.SubItems.Add(DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year);
+                            item.SubItems.Add(DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second);
+                            item.SubItems.Add((v_atual - media).ToString());
+                            item.SubItems.Add((((v_atual - media) / media) * 100).ToString() + "%");
+                            item.SubItems.Add("Queda").BackColor = Color.IndianRed;
+                            item.SubItems[6].ForeColor = Color.White;
+                            listView1.Items.Add(item);
+
+                            label2.Visible = false;
+
+                            // Oportunidade de investimento, Bitcoin queda                        
+                            chart1.Series[0].Points[t - 1].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+                            chart1.Series[0].Points[t - 1].MarkerColor = Color.IndianRed;
+
+                            // Notifica
+                            NotificarQueda(Settings.Default.y);
+
+                            // Verifica se o usuário optou por incrementar valores em caso de notificação
+                            if (Settings.Default.agregar_valores)
+                            {
+                                if (Settings.Default.y.Equals(1))
+                                {
+                                    Settings.Default.y = 1.0001;
+                                }
+                                else
+                                {
+                                    Settings.Default.y = Settings.Default.y * Settings.Default.y;
+                                }
+
+                                Settings.Default.Save();
+                            }
+                        }
+
+                        // Após terminar os cálculos, realiza a interação com outros componentes            
+                        // STATUSTRIP, TOOLSTRIPS
+                        toolStripStatusLabelMEDIA.Text = "Média: " + media.ToString();
+
+                        // CHART
+                        chart1.Series[3].Points.AddXY(t - 1, media);
+                        chart1.Series[1].Points.AddXY(t - 1, mediaVezesX);
+                        // No gráfico, define a linha que representa o limite entre o produto da média tendendo a queda do Bitcoin. Verifica se o valor de Y é menor que zero, então define o valor como zero para interação de interface
+                        if (mediaVezesY <= 0) { mediaVezesY = 0; }
+                        chart1.Series[2].Points.AddXY(t - 1, mediaVezesY);
+
+                        // Finaliza a análise com relatorio de percentual de variações
+
+                        // Variável intervalo conta quantos intervalos de k segundos existem no tempo total decorrido
+                        intervalo = t / k;
+                        if ((Math.Floor(intervalo) > 0) && (t == Math.Floor((k * intervalo))))
+                        {
+                            while ((x = (x + k)) <= t)
+                            {
+                                if (chart1.Series[0].Points[x - 1].YValues[0] > chart1.Series[0].Points[l].YValues[0])
+                                {
+                                    cresceu++;
+                                }
+                                else if (chart1.Series[0].Points[x - 1].YValues[0] < chart1.Series[0].Points[l].YValues[0])
+                                {
+                                    caiu++;
+                                }
+                                else
+                                {
+                                    manteve++;
+                                }
+
+                                // Atualiza o valor de l deixando igual ao x "antigo". O x será agregado na sequencia ao termino deste loop
+                                l = x;
+                            }
+
+                            // Interação com a interface
+                            labelCresceu.Text = ((cresceu / Math.Floor(intervalo)) * 100).ToString("0.00") + "% (" + cresceu.ToString() + "/" + Math.Floor(intervalo).ToString() + ") cresceu";
+                            labelCaiu.Text = ((caiu / Math.Floor(intervalo)) * 100).ToString("0.00") + "% (" + caiu.ToString() + "/" + Math.Floor(intervalo).ToString() + ") caiu";
+                            labelManteve.Text = ((manteve / Math.Floor(intervalo)) * 100).ToString("0.00") + "% (" + manteve.ToString() + "/" + Math.Floor(intervalo).ToString() + ") manteve";
+                            labelCresceu.Refresh();
+                            labelCaiu.Refresh();
+                            labelManteve.Refresh();
                         }
                     }
-                    else if (Settings.Default.y <= (media / v_atual))
-                    {
-                        ListViewItem item = new ListViewItem();
-                        item.UseItemStyleForSubItems = false;
-                        item.Text = v_atual.ToString();
-                        item.SubItems.Add(media.ToString());
-                        item.SubItems.Add(DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year);
-                        item.SubItems.Add(DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second);
-                        item.SubItems.Add((v_atual - media).ToString());
-                        item.SubItems.Add((((v_atual - media) / media) * 100).ToString() + "%");
-                        item.SubItems.Add("Queda").BackColor = Color.IndianRed;
-                        item.SubItems[6].ForeColor = Color.White;
-                        listView1.Items.Add(item);
+                }
+            }));
+            
 
-                        label2.Visible = false;
-
-                        // Oportunidade de investimento, Bitcoin queda                        
-                        chart1.Series[0].Points[t - 1].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-                        chart1.Series[0].Points[t - 1].MarkerColor = Color.IndianRed;
-
-                        // Notifica
-                        NotificarQueda(Settings.Default.y);
-
-                        // Verifica se o usuário optou por incrementar valores em caso de notificação
-                        if (Settings.Default.agregar_valores)
-                        {
-                            if (Settings.Default.y.Equals(1))
-                            {
-                                Settings.Default.y = 1.0001;
-                            }
-                            else
-                            {
-                                Settings.Default.y = Settings.Default.y * Settings.Default.y;
-                            }
-
-                            Settings.Default.Save();
-                        }
-                    }
-
-                    // Após terminar os cálculos, realiza a interação com outros componentes            
-                    // STATUSTRIP, TOOLSTRIPS
-                    toolStripStatusLabelMEDIA.Text = "Média: " + media.ToString();
-
-                    // CHART
-                    chart1.Series[3].Points.AddXY(t - 1, media);
-                    chart1.Series[1].Points.AddXY(t - 1, mediaVezesX);
-                    // No gráfico, define a linha que representa o limite entre o produto da média tendendo a queda do Bitcoin. Verifica se o valor de Y é menor que zero, então define o valor como zero para interação de interface
-                    if (mediaVezesY <= 0) { mediaVezesY = 0; }
-                    chart1.Series[2].Points.AddXY(t - 1, mediaVezesY);
-
-                    // Finaliza a análise com relatorio de percentual de variações
-
-                    // Variável intervalo conta quantos intervalos de k segundos existem no tempo total decorrido
-                    intervalo = t / k;                    
-                    if ((Math.Floor(intervalo) > 0) && (t == Math.Floor((k * intervalo))))
-                    {                        
-                        while ((x = (x + k)) <= t)
-                        {
-                            if (chart1.Series[0].Points[x - 1].YValues[0] > chart1.Series[0].Points[l].YValues[0])
-                            {
-                                cresceu++;
-                            }
-                            else if (chart1.Series[0].Points[x - 1].YValues[0] < chart1.Series[0].Points[l].YValues[0])
-                            {
-                                caiu++;
-                            }
-                            else
-                            {
-                                manteve++;
-                            }                            
-
-                            // Atualiza o valor de l deixando igual ao x "antigo". O x será agregado na sequencia ao termino deste loop
-                            l = x;
-                        }
-
-                        // Interação com a interface
-                        labelCresceu.Text = ((cresceu / Math.Floor(intervalo)) * 100).ToString("0.00") + "% (" + cresceu.ToString() + "/" + Math.Floor(intervalo).ToString() + ") cresceu";
-                        labelCaiu.Text = ((caiu / Math.Floor(intervalo)) * 100).ToString("0.00") + "% (" + caiu.ToString() + "/" + Math.Floor(intervalo).ToString() + ") caiu";
-                        labelManteve.Text = ((manteve / Math.Floor(intervalo)) * 100).ToString("0.00") + "% (" + manteve.ToString() + "/" + Math.Floor(intervalo).ToString() + ") manteve";
-                        labelCresceu.Refresh();
-                        labelCaiu.Refresh();
-                        labelManteve.Refresh();                     
-                    }                    
-                }                
+#if DEBUG
+            if (chart1.Series[0].Points.Count < 50)
+            {
+                new System.Threading.Thread(() => {
+                    timerColetarECalcularValor_Tick(null, EventArgs.Empty);
+                }).Start();                
             }
+
+            timerColetarECalcularValor.Stop();
+            timerColetarECalcularValor.Enabled = false;
+#endif
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -558,63 +573,81 @@ namespace Bitcoin_Hoje
         private void GerarPercentuaisFibonacci()
         {
             // Resolver o calculo para listar estes itens
-            double p100 = fiboP1 - fiboP2; // 100%
-            double p618 = fiboP2 + (p100 * 0.618);
-            double p50 = fiboP2 + (p100 * 0.5F);
-            double p382 = fiboP2 + (p100 * 0.382F);
-            double p236 = fiboP2 + (p100 * 0.236F);
-            double p0 = fiboP2;            
+            double delta = fiboP1 - fiboP2; // 100%
+            double p618 = fiboP2 + (delta * 0.618);
+            double p50 = fiboP2 + (delta * 0.5F);
+            double p382 = fiboP2 + (delta * 0.382F);
+            double p236 = fiboP2 + (delta * 0.236F);                   
             Color stripColor = Color.LightCoral;
-            const short stripWidth = 4;
+            const short stripBorderWidth = 2;
+            const short stripBorderWidthExtremos = 3;
                      
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine() {                 
                 IntervalOffset = fiboP1,                
-                StripWidth = stripWidth,
                 BackColor = stripColor,
-                Text = "100%"
+                BorderColor = stripColor,
+                Text = $"1 ({fiboP1.ToString("0.00")})",
+                BorderWidth = stripBorderWidthExtremos,
+                BorderDashStyle = ChartDashStyle.DashDot,
+                ToolTip = fiboP1.ToString()
             });
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
-            {
-                Interval = 9.5,
+            {                
                 IntervalOffset = p618,
-                StripWidth = stripWidth,
+                BorderWidth = stripBorderWidth,
+                BorderDashStyle = ChartDashStyle.DashDot,
                 BackColor = stripColor,
-                Text = "61,8%"
+                BorderColor = stripColor,
+                Text = $"0,618 ({p618.ToString("0.00")})",
+                ToolTip = p618.ToString()
             });
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
             {
                 IntervalOffset = p50,
-                StripWidth = stripWidth,
+                BorderWidth = stripBorderWidth,
+                BorderDashStyle = ChartDashStyle.DashDot,
                 BackColor = stripColor,
-                Text = "50%"
+                BorderColor = stripColor,
+                Text = $"0,5 ({p50.ToString("0.00")})",
+                ToolTip = p50.ToString()
             });
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
             {
                 IntervalOffset = p382,
-                StripWidth = stripWidth,
+                BorderWidth = stripBorderWidth,
+                BorderDashStyle = ChartDashStyle.DashDot,
                 BackColor = stripColor,
-                Text = "38,2%"
+                BorderColor = stripColor,
+                Text = $"0.382 ({p382.ToString("0.00")})",                
+                ToolTip = p382.ToString()
             });
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
             {
                 IntervalOffset = p236,
-                StripWidth = stripWidth,
+                BorderWidth = stripBorderWidth,
+                BorderDashStyle = ChartDashStyle.DashDot,
                 BackColor = stripColor,
-                Text = "23,6%"
+                BorderColor = stripColor,
+                Text = $"0.236 ({p236.ToString("0.00")})",
+                ToolTip = p236.ToString()
             });
 
             chart1.ChartAreas[0].AxisY.StripLines.Add(new StripLine()
             {                                
-                IntervalOffset = p0,                
-                StripWidth = stripWidth,
+                IntervalOffset = fiboP2,
+                BorderWidth = stripBorderWidthExtremos,
+                BorderDashStyle = ChartDashStyle.DashDot,
                 BackColor = stripColor,
-                Text = "0%"                
+                BorderColor = stripColor,
+                Text = $"0 ({fiboP2.ToString("0.00")})",
+                ToolTip = fiboP2.ToString()
             });
         }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
