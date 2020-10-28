@@ -573,7 +573,7 @@ namespace Bitcoin_Hoje
         private void GerarPercentuaisFibonacci()
         {
             // Resolver o calculo para listar estes itens
-            double delta = fiboP1 - fiboP2; // 100%
+            double delta = fiboP1 - fiboP2; // primeiro ponto onde usuario selecionou menos o segundo
             double p618 = fiboP2 + (delta * 0.618);
             double p50 = fiboP2 + (delta * 0.5F);
             double p382 = fiboP2 + (delta * 0.382F);
