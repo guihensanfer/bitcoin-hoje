@@ -14,3 +14,5 @@ This version was developed using **C#** with **.NET Framework** for **Windows Fo
 - Capability to analyze **price variations** over a specified **time interval**.
 - A separate branch is available featuring **Fibonacci Retracement Analysis** integrated into the chart, providing advanced **technical analysis** tools for deeper insights.
 
+![Application Screenshot](btcHojePrint.png)
+
